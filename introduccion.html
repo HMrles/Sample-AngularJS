@@ -1,0 +1,25 @@
+<!--  2 way data binding -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Introduccion a AngularJS</title>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app>
+		<label>Nombre: </label>
+		<input type="text" placeholder="Escribe tu nombre" ng-model="nombre">
+		<label>Seleciona el  color</label>
+		<select  ng-model="color">
+			<option value="success">succes</option>
+			<option value="warning">warning</option>
+			<option value="danger">danger</option>
+			<option value="info">info</option>
+		</select>
+		<hr>
+    <h1 class="text-{{color}}">Hola {{nombre}}!!</h1>
+	</div>
+
+</body>
+</html>
