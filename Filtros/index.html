@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filtros</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+	<script src="filtros.js"></script>
+</head>
+<body ng-app>
+	<div class="container" ng-controller="controladorFiltros">
+	<h1>Filtros con Angular</h1>
+	<hr>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+				<input type="text" class="form-control" placeholder="Buscar empleado">
+			</div>			
+		</div>		
+	</div>	
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Apellido Paterno</th>
+					<th>Apellido Materno</th>
+					<th>Feha de Nacimiento</th>
+					<th>Telefono</th>
+					<th>Salario</th>
+					<th>Bono</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="empleado in empleados">
+					<td>{{empleado.nombre}}</td>
+					<td>{{empleado.apellidoPaterno}}</td>
+					<td>{{empleado.apellidoMaterno}}</td>
+					<td>{{empleado.fecha}}</td>
+					<td>{{empleado.salario}}</td>
+					<td>{{empleado.telefono}}</td>
+					<td>{{empleado.bono}}</td>
+				</tr>
+			</tbody>
+	</div>	
+	</div>
+</body>
+</html>
