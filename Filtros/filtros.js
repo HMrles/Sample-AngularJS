@@ -25,4 +25,8 @@ function controladorFiltros($scope){
 			salario: 13000, telefono:'227110305', bono: 3.1416
 		},
 	]
-}
+
+	$scope.ordenarPor = function(orden){
+		$scope.ordenSelecionado = orden;
+	};
+};
