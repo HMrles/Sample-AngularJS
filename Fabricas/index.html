@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Fabricas con AngularJS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+	<script src="main.js"></script>
+</head>
+<body ng-app="miApp">
+	<div class="container">
+		<h1>Compartir datos entre controladores utilizando Fabricas</h1>
+		<hr>
+		<span class="lead text-info">Controlador Uno</span>
+		<div ng-controller="controladorUno">
+			<input type="text" size="50" ng-model="nuevoMensaje">
+			<button class="btn btn-success" ng-click="nuevo()">Guardar</button>
+			<h3 class="text-info">{{dato.mensaje}}</h3>
+		</div>
+
+		<hr>
+		<span class="lead text-warning">Controlador Dos</span>
+		<div ng-controller="controladorDos">
+			<input type="text" size="50" ng-model="nuevoMensaje">
+			<button class="btn btn-success" ng-click="nuevo()">Guardar</button>
+			<h3 class="text-warning">{{dato.mensaje}}</h3>
+		</div>
+
+		<hr>
+		<div ng-controller="controladorTres">
+			<button class="btn btn-primary" ng-click="resetear()">Mensaje inicial</button>
+		</div>
+	</div>
+</body>
+</html>
